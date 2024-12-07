@@ -1,0 +1,46 @@
+{
+  "name": "muzi-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon app.js",
+    "build": "cross-env NODE_ENV=production node app.js",
+    "initModule": "sequelize-auto -o models -h localhost -d muzi -u root -x xykl4869 -p 3306 -e mysql --cm p"
+  },
+  "dependencies": {
+    "@koa/cors": "^5.0.0",
+    "@types/koa": "^2.15.0",
+    "helmet": "^8.0.0",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.15.3",
+    "koa-bodyparser": "^4.4.1",
+    "koa-compress": "^5.1.1",
+    "koa-helmet": "^7.1.0",
+    "koa-router": "^13.0.1",
+    "lodash": "^4.17.21",
+    "minio": "^8.0.2",
+    "module-alias": "^2.2.3",
+    "mysql2": "^3.11.3",
+    "nodemailer": "^6.9.16",
+    "sequelize": "^6.37.5",
+    "sequelize-auto": "^0.8.8",
+    "svg-captcha": "^1.4.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "koa-logger": "^3.2.1",
+    "nodemon": "^3.1.7"
+  },
+  "_moduleAliases": {
+    "@": ".",
+    "@config": "./config",
+    "@services": "./service",
+    "@controllers": "./controller",
+    "@utils": "./utils"
+  },
+  "volta": {
+    "node": "22.11.0"
+  }
+}
